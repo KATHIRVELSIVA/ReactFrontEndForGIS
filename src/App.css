@@ -1,0 +1,62 @@
+body {
+    height: 300%;
+    width: 100%;
+    background: silver;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background: aqua;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+form {
+    padding: 20px;
+    margin: 2%;
+}
+
+form,
+form-control {
+    
+}
+
+/* 
+body:hover {
+    animation-name: background;
+    animation-duration: 4s;
+}
+
+h1 {
+    text-align: center;
+}
+
+@keyframes background {
+    0% {
+        background-color: aqua;
+    }
+
+    25% {
+        background-color: #9A1663;
+    }
+
+    50% {
+        background-color: #E0144C;
+    }
+
+    75% {
+        background-color: #FF5858;
+    }
+
+    100% {
+        background-color: #FF97C1;
+    }
+} */

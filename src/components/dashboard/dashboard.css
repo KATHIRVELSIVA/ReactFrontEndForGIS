@@ -1,0 +1,141 @@
+/* tpn card style */
+.tpn_card {
+    background: var(--bg-light);
+    padding: 23px;
+    border-radius: 27px;
+}
+
+.tpn_card img {
+    border-radius: 23px;
+    box-shadow: 1px 7px 13px var(--shadow);
+}
+
+.tpn_card h5 {
+    color: var(--bg-dark);
+}
+
+.tpn_card p {
+    color: var(--font-body);
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.tpn_card .tpn_btn {
+    padding: 13px 27px !important;
+    line-height: normal;
+    background: var(--bg-dark);
+    border-radius: 17px;
+    text-decoration: none;
+    color: #FFF;
+    box-shadow: 1px 7px 13px var(--shadow);
+    transition: all .7s ease;
+}
+
+.tpn_card .tpn_btn:hover {
+    background: var(--bg-darker);
+    box-shadow: none;
+}
+
+.wrapperd {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.containerd {
+    height: 23.5em;
+    width: 18.75em;
+    position: relative;
+    perspective: 37.5em;
+}
+
+
+.cardd {
+    height: inherit;
+    width: inherit;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.cardd:hover {
+    transform: rotateY(180deg);
+}
+
+.frontd,
+.backd {
+    background-color: #ffffff;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    border-radius: 1em;
+    backface-visibility: hidden;
+}
+
+.frontd img {
+    display: block;
+    position: relative;
+    width: 14.375em;
+    border-radius: 1em;
+    margin: 2em auto 1em auto;
+}
+
+.frontd h2,
+.frontd h3,
+.frontd h6 {
+    text-align: center;
+}
+
+.frontd h2 {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: #5b5b5b;
+}
+
+.frontd h3 {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.frontd h6 {
+    color: #a0a0a0;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.backd {
+    transform: rotateY(180deg);
+}
+
+.backd button {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 12.5em;
+    font-size: 1em;
+    background-color: #cc091f;
+    color: #ffffff;
+    border-radius: 0.5em;
+    padding: 1em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.card {
+    width: 20vw;
+}
+
+#SuperProducts {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.centerpage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

@@ -1,0 +1,73 @@
+.breadcrumb {
+    background-color: #536eef;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.router-link {
+    text-decoration: none;
+}
+
+.card-title {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.breadcrumb-item {
+    font-weight: bold;
+    color: #495057;
+}
+
+.beneficiary-card {
+    background-color: green;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.client-card {
+    background-color: red;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.policy-card {
+    background-color: orange;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card {
+    background-color: pink;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb-item.success {
+    color: white;
+}
+
+.action-button {
+    background-color: #fff;
+    border-radius: 35px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: #2264ff;
+    width: 25%;
+}
+
+.card-icon {
+    font-size: 4.1vh;
+    max-width: 100%;
+    max-height: 100%;
+    color: #fff;
+}
