@@ -1,14 +1,44 @@
-body {
-    background-image: url(https://images.pexels.com/photos/7688374/pexels-photo-7688374.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-    background-repeat: no-repeat;
-    background-size: cover;
+.whatscovered .card-wrapper.covered-menu {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 15px;
 }
 
-form {
-    opacity: 20px;
-    color: aliceblue;
-    size: 10px;
+.whatscovered .detailed-addon-card.detailed-addon-card-2.card {
+    padding: 16px 20px;
 }
+
+.whatscovered .detailed-addon-card.detailed-addon-card-2.card {
+    padding: 16px 20px;
+}
+
+.whatscovered .card-wrapper .detailed-addon-card {
+    flex: auto;
+}
+
+.whatscovered .detailed-addon-card {
+    min-height: 308px;
+}
+
+.detailed-addon-card {
+    padding: 20px;
+}
+
+.detailed-addon-card {
+    padding: 15px;
+}
+
+.detailed-addon-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.detailed-addon-card {
+    width: 100%;
+}
+
+
 
 /*
 .form-control,

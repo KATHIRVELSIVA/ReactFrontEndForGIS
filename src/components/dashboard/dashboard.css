@@ -123,9 +123,20 @@
     cursor: pointer;
 }
 
-.card {
+/* .card {
+   display:grid;
+   
     width: 20vw;
-}
+} */
+
+/* .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+
+} */
+
 
 #SuperProducts {
     display: flex;

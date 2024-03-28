@@ -67,7 +67,7 @@ export function SignUp() {
                 />
             </div>
 
-            <div className="mb-3">
+            {/* <div className="mb-3">
                 <label>Bank Account Number</label>
                 <input
                     type="text"
@@ -76,7 +76,7 @@ export function SignUp() {
                     required
                     onChange={e => setValues({ ...values, bankAccNo: e.target.value })}
                 />
-            </div>
+            </div> */}
             <div className="mb-3">
                 <label>Aadhar Number</label>
                 <input

@@ -9,7 +9,7 @@ export function Policy() {
     }, []);
     return (
         <>
-            <h1>Policy Page</h1>
+            <h1>List of policy</h1>
             <table className="table table-hover">
                 <thead>
                     <tr>

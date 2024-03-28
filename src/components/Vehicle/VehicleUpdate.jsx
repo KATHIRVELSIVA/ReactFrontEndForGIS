@@ -85,7 +85,7 @@ export function VehicleUpdate() {
                 <div className="mb-3">
                     <label>Year of Make</label>
                     <input
-                        type="month"
+                        type="text"
                         className="form-control"
                         placeholder="Year of Make"
                         required
@@ -101,8 +101,9 @@ export function VehicleUpdate() {
                         className="form-control"
                         placeholder="IDV value"
                         required
+                        disabled
                         value={values.idVvalue}
-                        onChange={e => setValues({ ...values, idVvalue: e.target.value })}
+                        onLoad={e => setValues({ ...values, idVvalue: e.target.value })}
                     />
                 </div>
 

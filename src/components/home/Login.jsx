@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from 'js-cookie';
+import './login.css';
 export function Login() {
     const [values, setValues] = useState({
         email: '',
@@ -52,7 +53,7 @@ export function Login() {
     return (
         <>
             <h3 className="text-center">General Insurance System</h3>
-            <form className="card container mt-5 p-5" onSubmit={handleSubmit} >
+            <form className="card container mt-5 p-5" id="login" onSubmit={handleSubmit} >
                 <h3 className="text-center">LOGIN</h3>
 
                 <div className="mb-3">

@@ -9,7 +9,7 @@ export function AddOnPolicy() {
     }, []);
     return (
         <>
-            <h1>Add On Policy Page</h1>
+            <h1>List of Add on policy</h1>
             <table className="table table-hover">
                 <thead>
                     <tr>

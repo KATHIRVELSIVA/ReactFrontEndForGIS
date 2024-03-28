@@ -105,7 +105,7 @@ export function Vehicle() {
 
     const [values, setValues] = useState({
         status: false,
-        userID: 1,
+        userID: Cookies.get("UserID"),
         vehicleNo: "",
         vehicleName: "",
         vehicleType: "",
@@ -114,6 +114,7 @@ export function Vehicle() {
     });
     const navigate = useNavigate();
     const idVCalculator = () => {
+        debugger
         if (values.vehicleName === "Maruthi") {
             let yearOfMake = parseInt(values.yearOfMake);
             let priceOfMaruthi = 555000;
@@ -179,7 +180,7 @@ export function Vehicle() {
 
         const post = {
             status: false,
-            userID: 1,
+            userID: Cookies.get("UserID"),
             vehicleNo: values.vehicleNo,
             vehicleName: values.vehicleName,
             vehicleType: values.vehicleType,

@@ -6,7 +6,6 @@ import { AddOnPolicy } from './components/addonpolicy/AddOnPolicy';
 import { Home } from './components/home/Home';
 import { SignUp } from './components/home/SignUp';
 import Cookies from 'js-cookie';
-import { Link } from "react-router-dom";
 import { Dashboard } from './components/dashboard/dashboard';
 import { Vehicle } from './components/dashboard/Vehicle';
 import { VehicleUpdate } from './components/Vehicle/VehicleUpdate';
@@ -26,6 +25,10 @@ import { AddOnUpdate } from './components/admin/addonpolicy/AddOnUpdate';
 import { AddOnDelete } from './components/admin/addonpolicy/AddOnDelete';
 import { ClaimInsurance } from './components/insuranceapply/ClaimInsurance';
 import { ClaimAmount } from './components/insuranceapply/ClaimAmount';
+import { About } from './components/about/About';
+import { HomeSreen } from './tryforUI/HomeScreen';
+import { Claims } from './components/claims/Claims';
+import { ClaimApproval } from './components/admin/ClaimApproval';
 
 function App() {
 
@@ -62,11 +65,15 @@ function App() {
                   <a className="dropdown-item" href="vehiclelist">Vehicle List</a>
                 </div>
               </li>
+              <li className="nav-item active">
+                <a className="nav-link" href="claimapproval">Claims</a>
+              </li>
               <li>
                 <span className='navbar-text'>
                   <button type="button" className="btn btn-sm btn-outline-danger mr-3 float-right" onClick={logOutFromDashBoard}>Logout</button>
                 </span>
               </li>
+
             </ul>
 
 
@@ -88,6 +95,7 @@ function App() {
             <Route path='/add-add-onpolicyupdate/:id' element={<AddOnUpdate />}></Route>
             <Route path='/policydelete/:id' element={<DeletePolicy />}></Route>
             <Route path='/add-add-onpolicydelete/:id' element={<AddOnDelete />}></Route>
+            <Route path='/claimapproval' element={<ClaimApproval />}></Route>
 
           </Routes>
         </BrowserRouter>
@@ -99,7 +107,7 @@ function App() {
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="/dashboard">
-              <i class="bi bi-person-circle h1"></i>
+            <i class="bi bi-person-circle h1"></i>
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -120,6 +128,9 @@ function App() {
                   <div className="dropdown-divider"></div>
                   <a className="dropdown-item" href="about">About</a>
                 </div>
+              </li>
+              <li className="nav-item active">
+                <a className="nav-link" href="claims">Claims</a>
               </li>
             </ul>
             <span className='navbar-text'>
@@ -146,6 +157,8 @@ function App() {
             <Route path='/viewpolicy/:id' element={<ViewInsurance />}></Route>
             <Route path='/vehicleclaim/:id' element={<ClaimInsurance />}></Route>
             <Route path='/vehicleclaimamount' element={<ClaimAmount />}></Route>
+            <Route path='/about' element={<About />}></Route>
+            <Route path='/claims' element={<Claims />}></Route>
           </Routes>
         </BrowserRouter>
         {/* <marquee direction="right"><Car /></marquee> */}
@@ -179,7 +192,8 @@ function App() {
             <Route path='/add-on-policy' element={<AddOnPolicy />}></Route>
             <Route path='/home' element={<Home />}></Route>
             <Route path='/sign-up' element={<SignUp />}></Route>
-            {/* <Route path='/checkhome' element={<CheckHome />}></Route> */}
+            <Route path='/about' element={<About />}></Route>
+            <Route path='/' element={<HomeSreen />}></Route>
 
           </Routes>
         </BrowserRouter>

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './dashboard.css';
 
 export function Dashboard() {
 
@@ -82,7 +83,7 @@ export function Dashboard() {
                             data ? data.filter((item) => item.userID == Cookies.get("UserID") && item.status === false)
                                 .map(item => (
                                     <div key={item.id === Cookies.get('userID')}>
-                                        <Card className='m-5 p-3'>
+                                        <Card className='m-5 p-3 rows'>
                                             <Card.Body>
                                                 <Card.Title className='text-uppercase'>{item.vehicleNo}</Card.Title>
                                                 <Card.Text>
