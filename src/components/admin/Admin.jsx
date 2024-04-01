@@ -33,7 +33,7 @@ export function Admin() {
                         <tr className='text-uppercase justify-content-center'>
                             <th>Policy Name</th>
                             <th>Policy Description</th>
-                            <th>Vehicle Type</th>
+                            <th>Policy Price</th>
                             <th>Actions</th>
                         </tr>
                     </thead>

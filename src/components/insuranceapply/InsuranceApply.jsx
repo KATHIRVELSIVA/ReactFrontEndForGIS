@@ -41,6 +41,7 @@ export function InsuranceApply() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        debugger
         console.log(values);
         axios.post('https://localhost:44319/api/InsuranceApply', values)
             .then(res => {

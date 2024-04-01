@@ -42,7 +42,7 @@ export function ClaimInsurance() {
 
             <h3>Claim insurance</h3>
 
-            <div className="mb-3">
+            {/* <div className="mb-3">
                 <label>Claim Name</label>
                 <input
                     type="text"
@@ -51,7 +51,7 @@ export function ClaimInsurance() {
                     required
                     onChange={e => setValues({ ...values, claimName: e.target.value })}
                 />
-            </div>
+            </div> */}
 
             <div className="mb-3">
                 <label>Claim Reason</label>

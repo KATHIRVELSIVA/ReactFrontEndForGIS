@@ -179,7 +179,7 @@ export function Vehicle() {
         let iDVvalue = idVCalculator();
 
         const post = {
-            status: false,
+            status: true,
             userID: Cookies.get("UserID"),
             vehicleNo: values.vehicleNo,
             vehicleName: values.vehicleName,
@@ -265,6 +265,8 @@ export function Vehicle() {
                             onChange={e => setValues({ ...values, location: e.target.value })}
                         />
                     </div>
+
+                    <label>Year of Make</label>
                     <select className='form-select' required onChange={e => setValues({ ...values, yearOfMake: e.target.value })}>
                         <option value="">Choose One</option>
                         {

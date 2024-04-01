@@ -23,7 +23,7 @@ export function AddaddOnPolicy() {
         <>
 
             <form className="card container mt-1 p-2 text-uppercase" onSubmit={handleSubmit}>
-                <h3 className="text-center ">Add Policy</h3>
+                <h3 className="text-center ">Add On Policy</h3>
 
                 <div className="mb-3">
                     <label>Add On Policy Name</label>
