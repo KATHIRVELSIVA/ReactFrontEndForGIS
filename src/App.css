@@ -4,7 +4,6 @@ body {
     background: silver;
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
 }
 
 
@@ -16,7 +15,7 @@ body {
 
 body {
     background: aqua;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(to bottom right, #3399ff 30%, #33ccff 70%);
 }
 
 form {
@@ -25,9 +24,7 @@ form {
 }
 
 form,
-form-control {
-    
-}
+form-control {}
 
 /* 
 body:hover {

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { Link } from "react-router-dom";
+import './claims.css';
 export function Claims() {
     const [appointment, setAppointment] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -27,48 +29,36 @@ export function Claims() {
 
     return (
         <>
-            <h1>Claims Applied</h1><br></br>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th scope='col'>User Name</th>
-                        <th scope='col'>Claim Name</th>
-                        <th scope='col'>Claim Reason</th>
-                        <th scope='col'>FIR No</th>
-                        <th scope='col'>Actions</th>
+            <h1>Claims Applied</h1>
+            {appointment
+                .map(e => (
+                    <>
+                        {
+                            apply
+                                .filter((item => item.applyId === e.applyId && e.claimName !== "Deleted" && item.userID == Cookies.get("UserID")))
+                                .map(data => (
+                                    <card className="card container" id="card" key={e.claimID}>
+                                        <span key={data.userID}>
+                                            {data.userID}
+                                        </span>
+                                        <span>{e.claimReason}</span>
+                                        <span>{e.firNo}</span>
+                                        <span>
+                                            <Link to={`/claimupdate`} onClick={Cookies.set('claimID', e.claimID)} className="btn btn-primary m-1">Edit</Link>
+                                            <Link to={`/claimdelete`} onClick={Cookies.set('claimID', e.claimID)} className="btn btn-danger m-1">Delete</Link>
+                                        </span>
+                                    </card>
+                                ))
 
-                        {/* <th scope='col'>Repair Status</th> */}
-                    </tr>
-                </thead>
-                <tbody>
+                        }
 
-                    {appointment
-                        .map(e => (
-                            <tr key={e.claimID}>
-
-                                {
-                                    apply
-                                        .filter((item => item.applyId === e.applyId))
-                                        .map(data => (
-                                            <tr>
-                                                <td key={data.applyId}>
-                                                    {data.user.userName}
-                                                </td>
-                                            </tr>
-                                        ))
-
-                                }
-                                <td>{e.claimName}</td>
-                                <td>{e.claimReason}</td>
-                                <td>{e.firNo}</td>
-                                <td><button type="button" class="btn btn-success">Approve</button><span>   <button type="button" class="btn btn-danger">Reject</button></span></td>
-
-                            </tr>
-                        ))}
+                    </>
 
 
-                </tbody>
-            </table>
+                ))}
+
+
+
 
 
         </>

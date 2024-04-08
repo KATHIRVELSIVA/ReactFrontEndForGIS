@@ -29,6 +29,8 @@ import { About } from './components/about/About';
 import { HomeSreen } from './tryforUI/HomeScreen';
 import { Claims } from './components/claims/Claims';
 import { ClaimApproval } from './components/admin/ClaimApproval';
+import { ClaimUpdate } from './components/claims/ClaimUpdate';
+import { ClaimDelete } from './components/claims/ClaimDelete';
 
 function App() {
 
@@ -96,6 +98,7 @@ function App() {
             <Route path='/policydelete/:id' element={<DeletePolicy />}></Route>
             <Route path='/add-add-onpolicydelete/:id' element={<AddOnDelete />}></Route>
             <Route path='/claimapproval' element={<ClaimApproval />}></Route>
+            <Route path='/vehicleclaimamount' element={<ClaimAmount />}></Route>
 
           </Routes>
         </BrowserRouter>
@@ -156,9 +159,11 @@ function App() {
             <Route path='/applypolicy/:id' element={<InsuranceApply />}></Route>
             <Route path='/viewpolicy/:id' element={<ViewInsurance />}></Route>
             <Route path='/vehicleclaim/:id' element={<ClaimInsurance />}></Route>
-            <Route path='/vehicleclaimamount' element={<ClaimAmount />}></Route>
+
             <Route path='/about' element={<About />}></Route>
             <Route path='/claims' element={<Claims />}></Route>
+            <Route path='/claimupdate' element={<ClaimUpdate />}></Route>
+            <Route path='/claimdelete' element={<ClaimDelete />}></Route>
           </Routes>
         </BrowserRouter>
         {/* <marquee direction="right"><Car /></marquee> */}

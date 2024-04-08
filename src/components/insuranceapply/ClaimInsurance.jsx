@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -23,7 +23,7 @@ export function ClaimInsurance() {
             .then(res => {
                 alert('Claim applied successfully..');
                 Cookies.set("claimId", values.applyId);
-                navigate('/vehicleclaimamount');
+                navigate('/dashboard');
             })
             .catch(err => {
                 if (err.response.status === 500) {
