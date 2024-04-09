@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import { Login } from './components/home/Login';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+test('renders login renders ', () => {
+  render(<BrowserRouter><Login /></BrowserRouter>);
+  const linkElement = screen.getByText('LOGIN');
   expect(linkElement).toBeInTheDocument();
 });

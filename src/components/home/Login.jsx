@@ -54,7 +54,7 @@ export function Login() {
         <>
             <h3 className="text-center">General Insurance System</h3>
             <form className="card container mt-5 p-5" id="login" onSubmit={handleSubmit} >
-                <h3 className="text-center">LOGIN</h3>
+                <h3 className="text-center" data-testid="Heading">LOGIN</h3>
 
                 <div className="mb-3">
                     <label>Email address</label>
@@ -62,6 +62,7 @@ export function Login() {
                         type="email"
                         className="form-control"
                         placeholder="Enter email"
+                        data-testid="TextBox1"
                         required
                         onChange={e => setValues({ ...values, email: e.target.value })}
                     />
@@ -70,9 +71,10 @@ export function Login() {
                 <div className="mb-3">
                     <label>Password</label>
                     <input
-                        type="Password"
+                        type="password"
                         className="form-control"
                         placeholder="Enter password"
+                        data-testid="TextBox2"
                         maxLength={14}
                         minLength={8}
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -83,7 +85,7 @@ export function Login() {
                 </div>
 
                 <div className="d-grid">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" data-testid="loginButton" className="btn btn-primary">
                         Submit
                     </button>
                 </div>

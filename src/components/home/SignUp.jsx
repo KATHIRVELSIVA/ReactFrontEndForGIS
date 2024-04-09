@@ -32,7 +32,7 @@ export function SignUp() {
     return (
         <form className="card container mt-5 p-5" onSubmit={handleSubmit}>
 
-            <h3>Sign Up</h3>
+            <h3 data-testid="Heading">Sign Up</h3>
 
             <div className="mb-3">
                 <label>Username</label>
@@ -41,6 +41,7 @@ export function SignUp() {
                     className="form-control"
                     placeholder="UserName"
                     required
+                    data-testid="Textbox1"
                     onChange={e => setValues({ ...values, userName: e.target.value })}
                 />
             </div>
@@ -51,6 +52,7 @@ export function SignUp() {
                     className="form-control"
                     placeholder="Enter email"
                     required
+                    data-testid="Textbox2"
                     onChange={e => setValues({ ...values, emailID: e.target.value })}
                 />
             </div>
@@ -63,6 +65,7 @@ export function SignUp() {
                     maxLength={10}
                     minLength={10}
                     required
+                    data-testid="Textbox3"
                     onChange={e => setValues({ ...values, phoneNo: e.target.value })}
                 />
             </div>
@@ -86,6 +89,7 @@ export function SignUp() {
                     maxLength={12}
                     minLength={12}
                     required
+                    data-testid="Textbox4"
                     onChange={e => setValues({ ...values, aadharNo: e.target.value })}
                 />
             </div>
@@ -99,6 +103,7 @@ export function SignUp() {
                     placeholder="Enter password"
                     maxLength={14}
                     minLength={8}
+                    data-testid="Textbox5"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                     required
@@ -121,7 +126,7 @@ export function SignUp() {
             </div> */}
 
             <div className="d-grid">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" data-testid="subbutton" className="btn btn-primary">
                     Sign Up
                 </button>
             </div>
